@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@types/react": "0.14.52",
     "mobx": "~2.6.5",
     "mobx-react": "~4.0.3",
     "react": "~15.4.0",
