@@ -5,9 +5,6 @@
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
   "installed": {
-    "jasmine/jasmine.d.ts": {
-      "commit": "9f0f926a12026287b5a4a229e5672c01e7549313"
-    },
     "es6-promise/es6-promise.d.ts": {
       "commit": "edb64e4a35896510ce02b93c0bca5ec3878db738"
     }
