@@ -1,5 +1,5 @@
 {
-  "name": "satcheljs-todo",
+  "name": "satcheljs-todomvc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,13 +11,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "mobx": "~2.2.2",
-    "mobx-react": "^3.1.0",
-    "react": "~15.1.0",
-    "react-dom": "~15.1.0",
-    "satcheljs": "~0.6.0",
-    "satcheljs-react-devtools": "~0.2.0",
-    "satcheljs-trace": "~0.3.0",
+    "mobx": "~2.6.5",
+    "mobx-react": "~4.0.3",
+    "react": "~15.4.0",
+    "react-dom": "~15.4.0",
+    "satcheljs": "~2.10.0",
+    "satcheljs-react-devtools": "~2.10.0",
+    "satcheljs-trace": "~2.10.0",
     "todomvc-app-css": "^2.0.4",
     "todomvc-common": "^1.0.2"
   },
@@ -25,7 +25,7 @@
     "jasmine": "^2.4.1",
     "jasmine-spec-reporter": "^2.4.0",
     "ts-loader": "^0.8.1",
-    "typescript": "^1.8.9",
+    "typescript": "~2.1.5",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-notifier": "^1.3.0"
