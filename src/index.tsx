@@ -4,8 +4,6 @@ import { applyMiddleware } from 'satcheljs';
 import App from './components/App';
 import { trace } from 'satcheljs-trace';
 
-causeABuildFailure();
-
 let regex = new RegExp("[\\?&]devtools=");
 let url = window.location.href.toLowerCase();
 if (regex.exec(url)) {
