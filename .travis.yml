@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+- '6.1'
+install:
+- npm install --no-progress
+script:
+- if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then bash npm run test; fi
