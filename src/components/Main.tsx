@@ -6,7 +6,7 @@ import removeItem from '../actions/removeItem';
 import toggleAllCompleted from '../actions/toggleAllCompleted';
 import toggleEditItem from '../actions/toggleEditItem';
 import updateEditItemValue from '../actions/updateEditItemValue';
-import updateItem from '../actions/UpdateItem';
+import updateItem from '../actions/updateItem';
 import {FilterType} from '../store/schema';
 
 @observer
