@@ -4,4 +4,4 @@ node_js:
 install:
 - npm install --no-progress
 script:
-- if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then bash npm run test; fi
+- npm run test
