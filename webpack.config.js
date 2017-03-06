@@ -1,7 +1,7 @@
 var WebpackNotifierPlugin = require('webpack-notifier');
 
 module.exports = {
-    entry: './src/index.tsx',
+    entry: './src/index.ts',
     devtool: 'source-map',
     output: {
         path: 'dist',
