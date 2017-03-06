@@ -8,7 +8,7 @@ import updateTextboxValue from '../actions/updateTextboxValue';
 export default class Header extends React.Component<any, any> {
     private textbox: HTMLInputElement;
 
-    onKeyPress: React.KeyboardEventHandler = (e) => {
+    onKeyPress = (e) => {
         if (e.key == "Enter") {
             addItem(this.textbox.value);
         }

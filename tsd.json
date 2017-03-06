@@ -5,20 +5,8 @@
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
   "installed": {
-    "react/react-dom.d.ts": {
-      "commit": "dade4414712ce84e3c63393f1aae407e9e7e6af7"
-    },
-    "react/react.d.ts": {
-      "commit": "dade4414712ce84e3c63393f1aae407e9e7e6af7"
-    },
-    "jasmine/jasmine.d.ts": {
-      "commit": "9f0f926a12026287b5a4a229e5672c01e7549313"
-    },
     "es6-promise/es6-promise.d.ts": {
       "commit": "edb64e4a35896510ce02b93c0bca5ec3878db738"
-    },
-    "node/node.d.ts": {
-      "commit": "6e55288b1bce1abdb1696cdecf324467a6bcf1aa"
     }
   }
 }
