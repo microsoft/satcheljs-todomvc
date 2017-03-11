@@ -24,7 +24,7 @@ export default class Header extends React.Component<HeaderProps, {}> {
     }
 
     onChange = () => {
-        // Update the store every time the textbox value changes.
+        // Update the store every time the textbox value changes
         updateTextboxValue(this.textbox.value);
     }
 
