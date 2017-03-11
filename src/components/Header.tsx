@@ -1,11 +1,18 @@
 import * as React from 'react';
-import {observer} from 'mobx-react';
+import { observer } from 'mobx-react';
+import { reactive } from 'satcheljs-react';
 import store from '../store/store';
 import addItem from '../actions/addItem';
 import updateTextboxValue from '../actions/updateTextboxValue';
 
-@observer
-export default class Header extends React.Component<{}, {}> {
+interface HeaderProps {
+    textboxValue?: string;
+}
+
+@reactive({
+    textboxValue: () => store.textboxValue,
+})
+export default class Header extends React.Component<HeaderProps, {}> {
     private textbox: HTMLInputElement;
 
     onKeyPress = (e) => {
@@ -29,7 +36,7 @@ export default class Header extends React.Component<{}, {}> {
                     ref={ref => this.textbox = ref}
                     className="new-todo"
                     placeholder="What needs to be done?"
-                    value={store.textboxValue}
+                    value={this.props.textboxValue}
                     autoFocus={true}
                     onChange={this.onChange}
                     onKeyPress={this.onKeyPress} />
