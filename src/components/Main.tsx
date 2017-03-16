@@ -31,7 +31,6 @@ export default class Main extends React.Component<any, any> {
     }
 
     onToggleEdit = (id: string) => {
-        let inputElement = this.refs["edit_" + id] as HTMLInputElement;
         toggleEditItem(id);
     }
 

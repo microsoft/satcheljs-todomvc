@@ -6,7 +6,8 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "experimentalDecorators": true,
-        "outDir": "dist"
+        "outDir": "dist",
+        "noUnusedLocals": true
     },
     "compileOnSave": false,
     "exclude": [
