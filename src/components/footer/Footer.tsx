@@ -1,8 +1,6 @@
 import * as React from 'react';
 import {observer} from 'mobx-react';
-import Store from '../../store/store';
 import removeAllCompleted from '../../actions/removeAllCompleted';
-import setFilter from '../../actions/setFilter';
 import {FilterType} from '../../store/schema';
 import ItemsLeftCount from './ItemsLeftCount';
 import FilterButton from './FilterButton';

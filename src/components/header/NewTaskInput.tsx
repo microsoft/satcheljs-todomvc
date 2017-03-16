@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { observer } from 'mobx-react';
 import { reactive } from 'satcheljs-react';
 import store from '../../store/store';
 import addItem from '../../actions/addItem';
