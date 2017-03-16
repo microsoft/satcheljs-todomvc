@@ -4,6 +4,7 @@ import Store from '../../store/store';
 import removeAllCompleted from '../../actions/removeAllCompleted';
 import setFilter from '../../actions/setFilter';
 import {FilterType} from '../../store/schema';
+import ItemsLeftCount from './ItemsLeftCount';
 
 @observer
 export default class Footer extends React.Component<any, any> {
@@ -16,11 +17,11 @@ export default class Footer extends React.Component<any, any> {
     }
 
     render() {
-        let {itemsLeft, filter} = Store;
+        let {filter} = Store;
 
         return (
             <footer className="footer">
-                <span className="todo-count">{itemsLeft} Left</span>
+                <ItemsLeftCount />
                 <ul className="filters">
                     <li><a href="#" onClick={() => this.onSetFilter(FilterType.All)} className={filter == FilterType.All ? "selected" : ""}>All</a></li>
                     <li><a href="#" onClick={() => this.onSetFilter(FilterType.Active)} className={filter == FilterType.Active ? "selected" : ""}>Active</a></li>
