@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { reactive } from 'satcheljs-react';
+import { observer } from 'mobx-react';
 import store from '../../store/store';
 import addItem from '../../actions/addItem';
 import updateTextboxValue from '../../actions/updateTextboxValue';
@@ -8,9 +8,7 @@ interface NewTaskInputProps {
     textboxValue?: string;
 }
 
-@reactive({
-    textboxValue: () => store.textboxValue,
-})
+@observer
 export default class NewTaskInput extends React.Component<NewTaskInputProps, {}> {
     private textbox: HTMLInputElement;
 
@@ -28,12 +26,14 @@ export default class NewTaskInput extends React.Component<NewTaskInputProps, {}>
     }
 
     render() {
+        let textboxValue = store.textboxValue;
+
         return (
             <input
                 ref={ref => this.textbox = ref}
                 className="new-todo"
                 placeholder="What needs to be done?"
-                value={this.props.textboxValue}
+                value={textboxValue}
                 autoFocus={true}
                 onChange={this.onChange}
                 onKeyPress={this.onKeyPress} />

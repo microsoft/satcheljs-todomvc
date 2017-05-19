@@ -1,5 +1,4 @@
-import { action } from 'satcheljs';
-import Store from '../store/store';
+import { boundActionCreator } from 'satcheljs';
 
 function guid() {
     function s4() {
@@ -9,16 +8,11 @@ function guid() {
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 }
 
-let addItem =
-    function addItem(text: string) {
-        Store.items.push({
-            id: guid(),
-            text: text,
-            completed: false
-        });
+let addItem = boundActionCreator('AddItemAction', (text: string) => ({
+    type: 'AddItemAction',
+    id: guid(),
+    text: text,
+    completed: false
+}));
 
-        Store.textboxValue = '';
-        Store.itemsLeft = Store.itemsLeft + 1;
-    };
-
-export default action("addItem")(addItem);
+export default addItem;

@@ -1,16 +1,15 @@
 import * as React from 'react';
-import { reactive } from 'satcheljs-react';
+import { observer } from 'mobx-react';
 import store from '../../store/store';
 
 interface ItemsLeftCountProps {
     itemsLeft?: number;
 }
 
-export default reactive({
-    itemsLeft: () => store.itemsLeft
-})(
+export default observer(
 function ItemsLeftCount(props: ItemsLeftCountProps) {
+    let itemsLeft = store.itemsLeft;
     return (
-        <span className="todo-count">{props.itemsLeft} Left</span>
+        <span className="todo-count">{itemsLeft} Left</span>
     );
 });
