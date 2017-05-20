@@ -2,7 +2,7 @@ import getStore from '../store/store';
 import { mutator } from 'satcheljs';
 import localAddItem from '../actions/localAddItem';
 
-mutator(localAddItem, (actionMessage) => {
+export default mutator(localAddItem, (actionMessage) => {
     getStore().items.push({
         id: actionMessage.id,
         text: actionMessage.text,

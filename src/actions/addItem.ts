@@ -9,7 +9,6 @@ function guid() {
 }
 
 let addItem = boundActionCreator('AddItemAction', (text: string) => ({
-    type: 'AddItemAction',
     id: guid(),
     text: text,
     completed: false

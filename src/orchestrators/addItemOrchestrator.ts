@@ -7,7 +7,7 @@ orchestrator(addItem, async(actionMessage) => {
         setTimeout(() => { 
             console.log("RESOLVED");
             resolve(); 
-        }, 2000);
+        }, 100);
     });
 
     localAddItem(actionMessage.id, actionMessage.text);

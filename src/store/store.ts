@@ -1,9 +1,9 @@
-import {createStore} from 'satcheljs';
+import {createStore, registerMutators} from 'satcheljs';
 import {StateTree, FilterType} from './schema';
 
-import '../orchestrators/addItemOrchestrator';
-import '../mutators/localAddItemMutator';
-import '../mutators/removeAllCompletedMutator';
+import localAddItemMutator from '../mutators/localAddItemMutator';
+import removeItemMutator from '../mutators/removeItemMutator';
+import removeAllCompletedMutator from '../mutators/removeAllCompletedMutator';
 
 var Store = createStore<StateTree>("todomvc", {
     items: [],
@@ -13,5 +13,10 @@ var Store = createStore<StateTree>("todomvc", {
     editItemId: null,
     editItemText: ''
 });
+
+registerMutators(
+    localAddItemMutator, 
+    removeAllCompletedMutator,
+    removeItemMutator);
 
 export default () => Store;
