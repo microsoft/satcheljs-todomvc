@@ -1,14 +1,14 @@
 import { action } from 'satcheljs';
-import Store from '../store/store';
+import getStore from '../store/store';
 
 let toggleEditItem =
     function toggleEditItem(id: string) {
-        if (Store.editItemId != id && id) {
-            let items = Store.items.filter(item => item.id == id);
-            Store.editItemId = id;
-            Store.editItemText = items[0].text;
+        if (getStore().editItemId != id && id) {
+            let items = getStore().items.filter(item => item.id == id);
+            getStore().editItemId = id;
+            getStore().editItemText = items[0].text;
         } else {
-            Store.editItemId = null;
+            getStore().editItemId = null;
         }
     };
 

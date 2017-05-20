@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Store from '../store/store';
+import getStore from '../store/store';
 import {observer} from 'mobx-react';
 import toggleCompleted from '../actions/toggleCompleted';
 import removeItem from '../actions/removeItem';
@@ -12,8 +12,8 @@ import {FilterType} from '../store/schema';
 @observer
 export default class Main extends React.Component<any, any> {
     componentDidUpdate() {
-        if (Store.editItemId) {
-            let inputElement = this.refs["edit_" + Store.editItemId] as HTMLInputElement;
+        if (getStore().editItemId) {
+            let inputElement = this.refs["edit_" + getStore().editItemId] as HTMLInputElement;
             inputElement.focus();
         }
     }
@@ -46,7 +46,7 @@ export default class Main extends React.Component<any, any> {
     }
 
     render() {
-        let {items, itemsLeft, filter, editItemId, editItemText} = Store;
+        let {items, itemsLeft, filter, editItemId, editItemText} = getStore();
 
         return (
             <section className="main">

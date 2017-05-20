@@ -1,8 +1,8 @@
 import getStore from '../store/store';
 import { mutator } from 'satcheljs';
-import addItem from '../actions/addItem';
+import localAddItem from '../actions/localAddItem';
 
-mutator(addItem, (actionMessage) => {
+mutator(localAddItem, (actionMessage) => {
     getStore().items.push({
         id: actionMessage.id,
         text: actionMessage.text,

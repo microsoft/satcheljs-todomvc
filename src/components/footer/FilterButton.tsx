@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 import { FilterType } from '../../store/schema';
-import store from '../../store/store';
+import getStore from '../../store/store';
 import setFilter from '../../actions/setFilter';
 
 interface FilterButtonProps {
@@ -11,7 +11,7 @@ interface FilterButtonProps {
 
 export default observer(
 function FilterButton(props: FilterButtonProps) {
-    let currentFilter = store.filter;
+    let currentFilter = getStore().filter;
     return (
         <li>
             <a

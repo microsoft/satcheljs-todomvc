@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import store from '../../store/store';
+import getStore from '../../store/store';
 import addItem from '../../actions/addItem';
 import updateTextboxValue from '../../actions/updateTextboxValue';
 
@@ -26,7 +26,7 @@ export default class NewTaskInput extends React.Component<NewTaskInputProps, {}>
     }
 
     render() {
-        let textboxValue = store.textboxValue;
+        let textboxValue = getStore().textboxValue;
 
         return (
             <input
