@@ -4,6 +4,7 @@ import {StateTree, FilterType} from './schema';
 import localAddItemMutator from '../mutators/localAddItemMutator';
 import removeItemMutator from '../mutators/removeItemMutator';
 import removeAllCompletedMutator from '../mutators/removeAllCompletedMutator';
+import setFilterMutator from '../mutators/setFilterMutator';
 
 var Store = createStore<StateTree>("todomvc", {
     items: [],
@@ -17,6 +18,7 @@ var Store = createStore<StateTree>("todomvc", {
 registerMutators(
     localAddItemMutator, 
     removeAllCompletedMutator,
-    removeItemMutator);
+    removeItemMutator,
+    setFilterMutator);
 
 export default () => Store;
