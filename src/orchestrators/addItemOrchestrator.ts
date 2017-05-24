@@ -2,11 +2,11 @@ import {orchestrator} from 'satcheljs';
 import addItem from '../actions/addItem';
 import localAddItem from '../actions/localAddItem';
 
-orchestrator(addItem, async(actionMessage) => {
+export default orchestrator(addItem, async(actionMessage) => {
     await new Promise((resolve, reject) => {
-        setTimeout(() => { 
+        setTimeout(() => {
             console.log("RESOLVED");
-            resolve(); 
+            resolve();
         }, 100);
     });
 
